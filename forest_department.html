@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Forest Department | Government Public Services</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="homepage.css">
+    <style>
+        .section-title {
+            margin-bottom: 1.5rem;
+            color: #4b006e;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+            font-size: 1.5rem;
+        }
+
+        .complaint-title {
+            color: #cc0000;
+        }
+
+        .complaint-card {
+            border-top: 4px solid #cc0000;
+        }
+
+        .complaint-card:hover {
+            box-shadow: 0 8px 15px rgba(204, 0, 0, 0.2);
+        }
+
+        .complaint-card i,
+        .complaint-card h3 {
+            color: #cc0000;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="top-bar">
+
+            <h1 class="brand">
+                <img src="main_logo.png" alt="Government Logo">
+                Government Public Services
+            </h1>
+
+            <div class="account" id="accountBtn">
+                <i class="fa fa-user-circle"></i>
+            </div>
+
+        </div>
+    </header>
+
+    <div class="layout">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <a href="homepage.html">
+                <i class="fa fa-home"></i>
+                Home
+            </a>
+
+            <a href="departments.html">
+                <i class="fa fa-building"></i>
+                Departments
+            </a>
+
+            <a href="public complaint.html">
+                <i class="fa fa-paper-plane"></i>
+                Submit Complaint
+            </a>
+
+            <a href="track.html">
+                <i class="fa fa-search"></i>
+                Track Complaint
+            </a>
+
+            <a href="application.html">
+                <i class="fa fa-clipboard-list"></i>
+                Apply for Services
+            </a>
+
+            <a href="store.html">
+                <i class="fa fa-folder-open"></i>
+                Store Document
+            </a>
+
+            <a href="digilocker_request.html">
+                <i class="fa fa-lock"></i>
+                DigiLocker
+            </a>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main>
+            <section class="hero" style="padding: 2.5rem 2rem; margin-bottom: 2.5rem;">
+                <h2>Forest Department</h2>
+                <p>
+                    Manage permissions and compensations related to forestry and wildlife, or submit complaints safely
+                    and reliably.
+                </p>
+            </section>
+
+            <section class="services">
+                <h3 class="section-title">Common Applications</h3>
+                <div class="service-grid">
+
+                    <a href="application.html" class="service-card"
+                        style="text-decoration: none; color: inherit; display: block;">
+                        <i class="fa fa-tree"></i>
+                        <h3>Tree Cutting Permission</h3>
+                        <p>In many areas, you need a permit even to cut a tree on your own private property.</p>
+                    </a>
+
+                    <a href="application.html" class="service-card"
+                        style="text-decoration: none; color: inherit; display: block;">
+                        <i class="fa fa-truck"></i>
+                        <h3>Timber Transit Pass</h3>
+                        <p>A permit required to transport wood from one location to another.</p>
+                    </a>
+
+                    <a href="application.html" class="service-card"
+                        style="text-decoration: none; color: inherit; display: block;">
+                        <i class="fa fa-paw"></i>
+                        <h3>Wildlife Compensation</h3>
+                        <p>Applying for money if a wild animal (like a leopard or elephant) damages your crops or
+                            livestock.</p>
+                    </a>
+
+                    <a href="application.html" class="service-card"
+                        style="text-decoration: none; color: inherit; display: block;">
+                        <i class="fa fa-camera-retro"></i>
+                        <h3>Film Shooting / Research</h3>
+                        <p>Permission to enter protected areas for professional work.</p>
+                    </a>
+
+                </div>
+            </section>
+
+            <section class="services" style="margin-top: 3rem;">
+                <h3 class="section-title complaint-title">Common Complaints</h3>
+                <div class="service-grid">
+
+                    <a href="public complaint.html" class="service-card complaint-card"
+                        style="text-decoration: none; display: block;">
+                        <i class="fa fa-fire"></i>
+                        <h3>Forest Fire</h3>
+                        <p>Reporting a fire in nearby woods.</p>
+                    </a>
+
+                    <a href="public complaint.html" class="service-card complaint-card"
+                        style="text-decoration: none; display: block;">
+                        <i class="fa fa-mask"></i>
+                        <h3>Poaching/Smuggling</h3>
+                        <p>Reporting illegal hunting or wood theft (like Sandalwood).</p>
+                    </a>
+
+                    <a href="public complaint.html" class="service-card complaint-card"
+                        style="text-decoration: none; display: block;">
+                        <i class="fa fa-exclamation-circle"></i>
+                        <h3>Animal Menace</h3>
+                        <p>Reporting wild animals entering human settlements.</p>
+                    </a>
+
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <footer>
+        © 2026 Government Public Services Department
+    </footer>
+
+    <script src="homepage.js"></script>
+
+</body>
+
+</html>

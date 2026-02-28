@@ -1,6 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
     loadRecentComplaints();
     loadRecentApplications();
+
+    // Check if URL has a tab parameter to open directly
+    const urlParams = new URLSearchParams(window.location.search);
+    const tabParam = urlParams.get('tab');
+    if (tabParam) {
+        switchTab(tabParam);
+    }
 });
 
 function loadRecentComplaints() {

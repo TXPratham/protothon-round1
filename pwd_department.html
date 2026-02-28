@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Department of Public Works (PWD) | Government Public Services</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="homepage.css">
+    <style>
+        .section-title {
+            margin-bottom: 1.5rem;
+            color: #4b006e;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+            font-size: 1.5rem;
+        }
+
+        .complaint-title {
+            color: #cc0000;
+        }
+
+        .complaint-card {
+            border-top: 4px solid #cc0000;
+        }
+
+        .complaint-card:hover {
+            box-shadow: 0 8px 15px rgba(204, 0, 0, 0.2);
+        }
+
+        .complaint-card i,
+        .complaint-card h3 {
+            color: #cc0000;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="top-bar">
+
+            <h1 class="brand">
+                <img src="main_logo.png" alt="Government Logo">
+                Government Public Services
+            </h1>
+
+            <div class="account" id="accountBtn">
+                <i class="fa fa-user-circle"></i>
+            </div>
+
+        </div>
+    </header>
+
+    <div class="layout">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <a href="homepage.html">
+                <i class="fa fa-home"></i>
+                Home
+            </a>
+
+            <a href="departments.html">
+                <i class="fa fa-building"></i>
+                Departments
+            </a>
+
+            <a href="public complaint.html">
+                <i class="fa fa-paper-plane"></i>
+                Submit Complaint
+            </a>
+
+            <a href="track.html">
+                <i class="fa fa-search"></i>
+                Track Complaint
+            </a>
+
+            <a href="application.html">
+                <i class="fa fa-clipboard-list"></i>
+                Apply for Services
+            </a>
+
+            <a href="store.html">
+                <i class="fa fa-folder-open"></i>
+                Store Document
+            </a>
+
+            <a href="digilocker_request.html">
+                <i class="fa fa-lock"></i>
+                DigiLocker
+            </a>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main>
+            <section class="hero" style="padding: 2.5rem 2rem; margin-bottom: 2.5rem;">
+                <h2>Department of Public Works (PWD)</h2>
+                <p>
+                    Manage permissions related to infrastructure development, or report public road and design issues
+                    securely.
+                </p>
+            </section>
+
+            <section class="services">
+                <h3 class="section-title">Common Applications</h3>
+                <div class="service-grid">
+
+                    <a href="application.html" class="service-card"
+                        style="text-decoration: none; color: inherit; display: block;">
+                        <i class="fa fa-hammer"></i>
+                        <h3>Road Cutting Permission</h3>
+                        <p>If a private citizen or company needs to dig up a road to lay a water pipe or cable.</p>
+                    </a>
+
+                    <a href="application.html" class="service-card"
+                        style="text-decoration: none; color: inherit; display: block;">
+                        <i class="fa fa-id-card-alt"></i>
+                        <h3>Contractor Registration</h3>
+                        <p>For engineers or firms to become "Class-1" or "Class-2" government contractors.</p>
+                    </a>
+
+                </div>
+            </section>
+
+            <section class="services" style="margin-top: 3rem;">
+                <h3 class="section-title complaint-title">Common Complaints</h3>
+                <div class="service-grid">
+
+                    <a href="public complaint.html" class="service-card complaint-card"
+                        style="text-decoration: none; display: block;">
+                        <i class="fa fa-road"></i>
+                        <h3>Potholes/Road Damage</h3>
+                        <p>Reporting broken roads or collapsed culverts.</p>
+                    </a>
+
+                    <a href="public complaint.html" class="service-card complaint-card"
+                        style="text-decoration: none; display: block;">
+                        <i class="fa fa-water"></i>
+                        <h3>Waterlogging</h3>
+                        <p>Reporting poor drainage design on a main road.</p>
+                    </a>
+
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <footer>
+        © 2026 Government Public Services Department
+    </footer>
+
+    <script src="homepage.js"></script>
+
+</body>
+
+</html>

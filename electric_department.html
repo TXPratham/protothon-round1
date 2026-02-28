@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Electricity Department | Government Public Services</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="homepage.css">
+    <style>
+        .section-title {
+            margin-bottom: 1.5rem;
+            color: #4b006e;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+            font-size: 1.5rem;
+        }
+
+        .complaint-title {
+            color: #cc0000;
+        }
+
+        .complaint-card {
+            border-top: 4px solid #cc0000;
+        }
+
+        .complaint-card:hover {
+            box-shadow: 0 8px 15px rgba(204, 0, 0, 0.2);
+        }
+
+        .complaint-card i,
+        .complaint-card h3 {
+            color: #cc0000;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="top-bar">
+
+            <h1 class="brand">
+                <img src="main_logo.png" alt="Government Logo">
+                Government Public Services
+            </h1>
+
+            <div class="account" id="accountBtn">
+                <i class="fa fa-user-circle"></i>
+            </div>
+
+        </div>
+    </header>
+
+    <div class="layout">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <a href="homepage.html">
+                <i class="fa fa-home"></i>
+                Home
+            </a>
+
+            <a href="departments.html">
+                <i class="fa fa-building"></i>
+                Departments
+            </a>
+
+            <a href="public complaint.html">
+                <i class="fa fa-paper-plane"></i>
+                Submit Complaint
+            </a>
+
+            <a href="track.html">
+                <i class="fa fa-search"></i>
+                Track Complaint
+            </a>
+
+            <a href="application.html">
+                <i class="fa fa-clipboard-list"></i>
+                Apply for Services
+            </a>
+
+            <a href="store.html">
+                <i class="fa fa-folder-open"></i>
+                Store Document
+            </a>
+
+            <a href="digilocker_request.html">
+                <i class="fa fa-lock"></i>
+                DigiLocker
+            </a>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main>
+            <section class="hero" style="padding: 2.5rem 2rem; margin-bottom: 2.5rem;">
+                <h2>Electricity Department</h2>
+                <p>
+                    Manage your electricity connections, apply for relevant applications and services, or submit
+                    complaints safely and reliably.
+                </p>
+            </section>
+
+            <section class="services">
+                <h3 class="section-title">Application Requests</h3>
+                <div class="service-grid">
+
+                    <a href="application.html" class="service-card"
+                        style="text-decoration: none; color: inherit; display: block;">
+                        <i class="fa fa-plug"></i>
+                        <h3>New Connection (LT/HT)</h3>
+                        <p>Applying for a new electricity meter for a house (Low Tension) or factory (High Tension).</p>
+                    </a>
+
+                    <a href="application.html" class="service-card"
+                        style="text-decoration: none; color: inherit; display: block;">
+                        <i class="fa fa-tachometer-alt"></i>
+                        <h3>Load Change</h3>
+                        <p>Requesting to increase (or decrease) the kilowatt capacity of your connection (e.g., if you
+                            install multiple ACs).</p>
+                    </a>
+
+                    <a href="application.html" class="service-card"
+                        style="text-decoration: none; color: inherit; display: block;">
+                        <i class="fa fa-user-edit"></i>
+                        <h3>Name Transfer</h3>
+                        <p>Changing the name on the electricity bill after buying a property.</p>
+                    </a>
+
+                    <a href="application.html" class="service-card"
+                        style="text-decoration: none; color: inherit; display: block;">
+                        <i class="fa fa-exchange-alt"></i>
+                        <h3>Tariff Change</h3>
+                        <p>Shifting from "Domestic" to "Commercial" if you start a shop in your house.</p>
+                    </a>
+
+                </div>
+            </section>
+
+            <section class="services" style="margin-top: 3rem;">
+                <h3 class="section-title complaint-title">Common Complaints</h3>
+                <div class="service-grid">
+
+                    <a href="public complaint.html" class="service-card complaint-card"
+                        style="text-decoration: none; display: block;">
+                        <i class="fa fa-file-invoice-dollar"></i>
+                        <h3>Billing Issues</h3>
+                        <p>Reporting an abnormally high bill or a faulty meter.</p>
+                    </a>
+
+                    <a href="public complaint.html" class="service-card complaint-card"
+                        style="text-decoration: none; display: block;">
+                        <i class="fa fa-bolt"></i>
+                        <h3>Power Outage</h3>
+                        <p>Reporting a local transformer failure or a snapped wire.</p>
+                    </a>
+
+                    <a href="public complaint.html" class="service-card complaint-card"
+                        style="text-decoration: none; display: block;">
+                        <i class="fa fa-wave-square"></i>
+                        <h3>Voltage Fluctuations</h3>
+                        <p>Reporting abnormal voltage levels or fluctuations affecting appliances.</p>
+                    </a>
+
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <footer>
+        © 2026 Government Public Services Department
+    </footer>
+
+    <script src="homepage.js"></script>
+
+</body>
+
+</html>

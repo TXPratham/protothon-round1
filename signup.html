@@ -40,6 +40,11 @@
             </div>
 
             <form id="signupForm">
+                <!-- Error/Success Message Container -->
+                <div id="errorMessage"
+                    style="display: none; background-color: #fee2e2; color: #b91c1c; padding: 0.75rem; border-radius: 6px; margin-bottom: 1rem; font-size: 0.9rem; text-align: center; border: 1px solid #f87171;">
+                </div>
+
                 <div class="input-group">
                     <label class="input-label" for="email">Email</label>
                     <input type="email" id="email" class="input-field" placeholder="name@company.com" required />
@@ -61,24 +66,10 @@
     </div>
     </div>
 
-    <script type="module">
-        import { auth } from './firebaseconfig.js';
-        import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.9.0/firebase-auth.js";
-
-        document.getElementById('signupForm').addEventListener('submit', async function (e) {
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', function (e) {
             e.preventDefault();
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
-
-            try {
-                if (!auth) throw new Error("Firebase Auth is not initialized. Check configuration.");
-                const userCredential = await createUserWithEmailAndPassword(auth, email, password);
-                console.log("User signed up:", userCredential.user);
-                window.location.href = 'profile-setup.html';
-            } catch (error) {
-                console.error("Signup error:", error);
-                alert("Signup failed: " + error.message);
-            }
+            window.location.href = 'profile-setup.html';
         });
     </script>
 </body>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Department of Mines and Geology | Government Public Services</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="homepage.css">
+    <style>
+        .section-title {
+            margin-bottom: 1.5rem;
+            color: #795548;
+            /* Brown color fitting for mines and geology */
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+            font-size: 1.5rem;
+        }
+
+        .complaint-title {
+            color: #cc0000;
+        }
+
+        .complaint-card {
+            border-top: 4px solid #cc0000;
+        }
+
+        .complaint-card:hover {
+            box-shadow: 0 8px 15px rgba(204, 0, 0, 0.2);
+        }
+
+        .complaint-card i,
+        .complaint-card h3 {
+            color: #cc0000;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="top-bar">
+
+            <h1 class="brand">
+                <img src="main_logo.png" alt="Government Logo">
+                Government Public Services
+            </h1>
+
+            <div class="account" id="accountBtn">
+                <i class="fa fa-user-circle"></i>
+            </div>
+
+        </div>
+    </header>
+
+    <div class="layout">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <a href="homepage.html">
+                <i class="fa fa-home"></i>
+                Home
+            </a>
+
+            <a href="departments.html">
+                <i class="fa fa-building"></i>
+                Departments
+            </a>
+
+            <a href="public complaint.html">
+                <i class="fa fa-paper-plane"></i>
+                Submit Complaint
+            </a>
+
+            <a href="track.html">
+                <i class="fa fa-search"></i>
+                Track Complaint
+            </a>
+
+            <a href="application.html">
+                <i class="fa fa-clipboard-list"></i>
+                Apply for Services
+            </a>
+
+            <a href="store.html">
+                <i class="fa fa-folder-open"></i>
+                Store Document
+            </a>
+
+            <a href="digilocker_request.html">
+                <i class="fa fa-lock"></i>
+                DigiLocker
+            </a>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main>
+            <section class="hero" style="padding: 2.5rem 2rem; margin-bottom: 2.5rem;">
+                <h2>Department of Mines and Geology</h2>
+                <p>
+                    Mineral exploration, responsible mining regulations, and geological surveying. Apply for relevant
+                    services and track mining complaints easily.
+                </p>
+            </section>
+
+            <section class="services">
+                <h3 class="section-title">Application Requests</h3>
+                <div class="service-grid">
+
+                    <a href="application.html" class="service-card"
+                        style="text-decoration: none; color: inherit; display: block;">
+                        <i class="fa fa-hammer"></i>
+                        <h3>Mining Lease (ML) / Quarry Lease (QL)</h3>
+                        <p>Applying for the legal right to extract "Major Minerals" (like Coal or Iron) or "Minor
+                            Minerals" (like Building Stone, Gravel, or Clay) from a specific plot of land.</p>
+                    </a>
+
+                    <a href="application.html" class="service-card"
+                        style="text-decoration: none; color: inherit; display: block;">
+                        <i class="fa fa-search-location"></i>
+                        <h3>Reconnaissance Permit (RP) / Prospecting License (PL)</h3>
+                        <p>If you aren't ready to mine yet but want permission to "search" or "survey" an area for
+                            minerals.</p>
+                    </a>
+
+                    <a href="application.html" class="service-card"
+                        style="text-decoration: none; color: inherit; display: block;">
+                        <i class="fa fa-truck-moving"></i>
+                        <h3>Transit Pass (E-Permit)</h3>
+                        <p>Every truck carrying minerals must have a digital pass. You apply for these in bulk to
+                            legally transport sand, stones, or ore from the mine to a buyer.</p>
+                    </a>
+
+                    <a href="application.html" class="service-card"
+                        style="text-decoration: none; color: inherit; display: block;">
+                        <i class="fa fa-certificate"></i>
+                        <h3>Dealer’s License</h3>
+                        <p>If you want to open a "Stockyard" or a shop to sell minerals (like a granite showroom or a
+                            sand yard), you need this permit.</p>
+                    </a>
+
+                    <a href="application.html" class="service-card"
+                        style="text-decoration: none; color: inherit; display: block;">
+                        <i class="fa fa-file-contract"></i>
+                        <h3>NOC for Land Conversion</h3>
+                        <p>If you have land that has minerals, you may need an NOC from this department before you can
+                            use it for something else, like building a factory.</p>
+                    </a>
+
+                </div>
+            </section>
+
+            <section class="services" style="margin-top: 3rem;">
+                <h3 class="section-title complaint-title">Common Complaints</h3>
+                <div class="service-grid">
+
+                    <a href="public complaint.html" class="service-card complaint-card"
+                        style="text-decoration: none; display: block;">
+                        <i class="fa fa-mountain"></i>
+                        <h3>Illegal Mining</h3>
+                        <p>Reporting unauthorized digging in riverbeds (sand) or hillsides (stones) that damages the
+                            environment.</p>
+                    </a>
+
+                    <a href="public complaint.html" class="service-card complaint-card"
+                        style="text-decoration: none; display: block;">
+                        <i class="fa fa-truck-pickup"></i>
+                        <h3>Illegal Transportation</h3>
+                        <p>Reporting trucks that are moving minerals at night without valid digital transit passes.</p>
+                    </a>
+
+                    <a href="public complaint.html" class="service-card complaint-card"
+                        style="text-decoration: none; display: block;">
+                        <i class="fa fa-bomb"></i>
+                        <h3>Blasting Nuisance</h3>
+                        <p>Complaining about nearby quarries using high-intensity explosives that cause cracks in
+                            residential houses or excessive dust.</p>
+                    </a>
+
+                    <a href="public complaint.html" class="service-card complaint-card"
+                        style="text-decoration: none; display: block;">
+                        <i class="fa fa-coins"></i>
+                        <h3>Royalty Theft</h3>
+                        <p>Reporting instances where a mine owner is extracting more than the permitted quota to avoid
+                            paying taxes (Royalty) to the government.</p>
+                    </a>
+
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <footer>
+        © 2026 Government Public Services Department
+    </footer>
+
+    <script src="homepage.js"></script>
+
+</body>
+
+</html>

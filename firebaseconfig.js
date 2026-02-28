@@ -1,21 +1,33 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.9.0/firebase-app.js";
 import { getFirestore } from "https://www.gstatic.com/firebasejs/12.9.0/firebase-firestore.js";
+import { getAuth } from "https://www.gstatic.com/firebasejs/12.9.0/firebase-auth.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.9.0/firebase-analytics.js";
 
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
-  databaseURL: import.meta.env.VITE_FIREBASE_DATABASE_URL,
-  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
-  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
-  appId: import.meta.env.VITE_FIREBASE_APP_ID,
-  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
+  apiKey: "AIzaSyAkR7VG5XZt1Qxb7nK5cqQmdkI9zM3tGDo",
+  authDomain: "protothon-seva-connect.firebaseapp.com",
+  databaseURL: "https://protothon-seva-connect-default-rtdb.asia-southeast1.firebasedatabase.app/",
+  projectId: "protothon-seva-connect",
+  storageBucket: "protothon-seva-connect.firebasestorage.app",
+  messagingSenderId: "807607822273",
+  appId: "1:807607822273:web:56b99ab9dc231541783140",
+  measurementId: "G-LYSDDHG38P"
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+let app;
+let analytics;
+let db;
+let auth;
 
-// Export the database to use in your tax and expense tracking modules
-export const db = getFirestore(app);
+try {
+  app = initializeApp(firebaseConfig);
+  analytics = getAnalytics(app);
+  db = getFirestore(app);
+  auth = getAuth(app);
+} catch (e) {
+  console.error("Firebase Initialization Error:", e);
+}
+
+// Export the database and auth
+export { db, auth };

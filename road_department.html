@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Road Department | Government Public Services</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="homepage.css">
+    <style>
+        .section-title {
+            margin-bottom: 1.5rem;
+            color: #d17800;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+            font-size: 1.5rem;
+        }
+
+        .complaint-title {
+            color: #cc0000;
+        }
+
+        .complaint-card {
+            border-top: 4px solid #cc0000;
+        }
+
+        .complaint-card:hover {
+            box-shadow: 0 8px 15px rgba(204, 0, 0, 0.2);
+        }
+
+        .complaint-card i,
+        .complaint-card h3 {
+            color: #cc0000;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="top-bar">
+
+            <h1 class="brand">
+                <img src="main_logo.png" alt="Government Logo">
+                Government Public Services
+            </h1>
+
+            <div class="account" id="accountBtn">
+                <i class="fa fa-user-circle"></i>
+            </div>
+
+        </div>
+    </header>
+
+    <div class="layout">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <a href="homepage.html">
+                <i class="fa fa-home"></i>
+                Home
+            </a>
+
+            <a href="departments.html">
+                <i class="fa fa-building"></i>
+                Departments
+            </a>
+
+            <a href="public complaint.html">
+                <i class="fa fa-paper-plane"></i>
+                Submit Complaint
+            </a>
+
+            <a href="track.html">
+                <i class="fa fa-search"></i>
+                Track Complaint
+            </a>
+
+            <a href="application.html">
+                <i class="fa fa-clipboard-list"></i>
+                Apply for Services
+            </a>
+
+            <a href="store.html">
+                <i class="fa fa-folder-open"></i>
+                Store Document
+            </a>
+
+            <a href="digilocker_request.html">
+                <i class="fa fa-lock"></i>
+                DigiLocker
+            </a>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main>
+            <section class="hero" style="padding: 2.5rem 2rem; margin-bottom: 2.5rem;">
+                <h2>Road Department</h2>
+                <p>
+                    Manage infrastructure development, road permissions, and maintenance. Apply for relevant permissions
+                    or submit complaints easily.
+                </p>
+            </section>
+
+            <section class="services">
+                <h3 class="section-title">Application Requests</h3>
+                <div class="service-grid">
+
+                    <a href="application.html" class="service-card"
+                        style="text-decoration: none; color: inherit; display: block;">
+                        <i class="fa fa-tools"></i>
+                        <h3>Road Cutting Permission</h3>
+                        <p>If you are building a house and need to dig across a public road to lay a water pipe or
+                            sewage line, you must apply for this and pay a "restoration fee."</p>
+                    </a>
+
+                    <a href="application.html" class="service-card"
+                        style="text-decoration: none; color: inherit; display: block;">
+                        <i class="fa fa-car-side"></i>
+                        <h3>Access/Driveway Permission</h3>
+                        <p>If you are opening a petrol pump, mall, or large apartment, you need a permit to create an
+                            entry/exit point onto a main highway.</p>
+                    </a>
+
+                    <a href="application.html" class="service-card"
+                        style="text-decoration: none; color: inherit; display: block;">
+                        <i class="fa fa-file-contract"></i>
+                        <h3>No Objection Certificate (NOC)</h3>
+                        <p>Required for building any structure within a certain distance of a highway (to allow for
+                            future road widening).</p>
+                    </a>
+
+                    <a href="application.html" class="service-card"
+                        style="text-decoration: none; color: inherit; display: block;">
+                        <i class="fa fa-hard-hat"></i>
+                        <h3>Contractor Registration</h3>
+                        <p>For local businesses to bid on government tenders to build or repair roads.</p>
+                    </a>
+
+                </div>
+            </section>
+
+            <section class="services" style="margin-top: 3rem;">
+                <h3 class="section-title complaint-title">Common Complaints</h3>
+                <div class="service-grid">
+
+                    <a href="public complaint.html" class="service-card complaint-card"
+                        style="text-decoration: none; display: block;">
+                        <i class="fa fa-exclamation-circle"></i>
+                        <h3>Potholes & Surface Wear</h3>
+                        <p>Reporting "black spots" or broken patches that cause accidents or damage vehicles.</p>
+                    </a>
+
+                    <a href="public complaint.html" class="service-card complaint-card"
+                        style="text-decoration: none; display: block;">
+                        <i class="fa fa-water"></i>
+                        <h3>Waterlogging</h3>
+                        <p>Complaining when a road turns into a pond because the department forgot to clear the side
+                            drains.</p>
+                    </a>
+
+                    <a href="public complaint.html" class="service-card complaint-card"
+                        style="text-decoration: none; display: block;">
+                        <i class="fa fa-lightbulb"></i>
+                        <h3>Missing Signage/Lights</h3>
+                        <p>Reporting broken streetlights or the lack of "Speed Breaker Ahead" signs in dangerous areas.
+                        </p>
+                    </a>
+
+                    <a href="public complaint.html" class="service-card complaint-card"
+                        style="text-decoration: none; display: block;">
+                        <i class="fa fa-road"></i>
+                        <h3>Illegal Speed Breakers</h3>
+                        <p>Reporting unauthorized humps built by local residents that don't follow safety standards.</p>
+                    </a>
+
+                    <a href="public complaint.html" class="service-card complaint-card"
+                        style="text-decoration: none; display: block;">
+                        <i class="fa fa-store-slash"></i>
+                        <h3>Encroachment</h3>
+                        <p>Reporting shops or walls that have extended onto the public footpath or road shoulder.</p>
+                    </a>
+
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <footer>
+        © 2026 Government Public Services Department
+    </footer>
+
+    <script src="homepage.js"></script>
+
+</body>
+
+</html>

@@ -1,7 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    loadRecentComplaints();
-    loadRecentApplications();
-
     // Check if URL has a tab parameter to open directly
     const urlParams = new URLSearchParams(window.location.search);
     const tabParam = urlParams.get('tab');
@@ -10,86 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-function loadRecentComplaints() {
-    const complaints = JSON.parse(localStorage.getItem("complaints"));
-    const container = document.getElementById("recentComplaintsContainer");
-    const list = document.getElementById("recentComplaintsList");
 
-    if (complaints && Object.keys(complaints).length > 0) {
-        container.style.display = "block";
-        list.innerHTML = "";
-
-        for (const [trackingId, details] of Object.entries(complaints)) {
-            const item = document.createElement("div");
-            item.style.cssText = "background: rgba(255, 255, 255, 0.95); padding: 1rem; border-radius: 8px; color: #4b006e; display: flex; justify-content: space-between; align-items: center; cursor: pointer; transition: background 0.2s;";
-
-            // Re-use logic to apply specific colors to statuses if needed, default dark text
-            let statusColor = "#6a0dad";
-            if (details.status === "Approved" || details.status === "Resolved") statusColor = "green";
-            if (details.status === "Under Review") statusColor = "orange";
-
-            item.innerHTML = `
-                <div>
-                    <strong>ID: ${trackingId}</strong>
-                </div>
-                <div style="font-weight: bold; color: ${statusColor};">
-                    ${details.status}
-                </div>
-            `;
-
-            // Clicking a complaint automatically fills the input and checks status
-            item.onclick = () => {
-                document.getElementById("trackInput").value = trackingId;
-                trackComplaint();
-            };
-
-            list.appendChild(item);
-        }
-    } else {
-        container.style.display = "none";
-    }
-}
-
-function loadRecentApplications() {
-    const applications = JSON.parse(localStorage.getItem("applications"));
-    const container = document.getElementById("recentApplicationsContainer");
-    const list = document.getElementById("recentApplicationsList");
-
-    if (applications && Object.keys(applications).length > 0) {
-        container.style.display = "block";
-        list.innerHTML = "";
-
-        for (const [trackingId, details] of Object.entries(applications)) {
-            const item = document.createElement("div");
-            item.style.cssText = "background: rgba(255, 255, 255, 0.95); padding: 1rem; border-radius: 8px; color: #4b006e; display: flex; flex-direction: column; gap: 0.5rem; cursor: pointer; transition: background 0.2s;";
-
-            let statusColor = "#6a0dad";
-            if (details.status === "Approved") statusColor = "green";
-            if (details.status === "Application Submitted") statusColor = "orange";
-
-            const serviceName = details.service ? `<span style="font-size: 0.9rem; color: #555;">${details.service}</span>` : "";
-
-            item.innerHTML = `
-                <div style="display: flex; justify-content: space-between; align-items: center;">
-                    <strong>ID: ${trackingId}</strong>
-                    <div style="font-weight: bold; color: ${statusColor};">
-                        ${details.status}
-                    </div>
-                </div>
-                ${serviceName}
-            `;
-
-            item.onclick = () => {
-                document.getElementById("appInput").value = trackingId;
-                trackApplication();
-            };
-
-            list.appendChild(item);
-        }
-    } else {
-        if (container) container.style.display = "none";
-    }
-}
 
 function switchTab(tab) {
     const tabComplaint = document.getElementById("tab-complaint");

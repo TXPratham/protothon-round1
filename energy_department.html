@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Department of Energy / Power | Government Public Services</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="homepage.css">
+    <style>
+        .section-title {
+            margin-bottom: 1.5rem;
+            color: #d1b200;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+            font-size: 1.5rem;
+        }
+
+        .complaint-title {
+            color: #cc0000;
+        }
+
+        .complaint-card {
+            border-top: 4px solid #cc0000;
+        }
+
+        .complaint-card:hover {
+            box-shadow: 0 8px 15px rgba(204, 0, 0, 0.2);
+        }
+
+        .complaint-card i,
+        .complaint-card h3 {
+            color: #cc0000;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="top-bar">
+
+            <h1 class="brand">
+                <img src="main_logo.png" alt="Government Logo">
+                Government Public Services
+            </h1>
+
+            <div class="account" id="accountBtn">
+                <i class="fa fa-user-circle"></i>
+            </div>
+
+        </div>
+    </header>
+
+    <div class="layout">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <a href="homepage.html">
+                <i class="fa fa-home"></i>
+                Home
+            </a>
+
+            <a href="departments.html">
+                <i class="fa fa-building"></i>
+                Departments
+            </a>
+
+            <a href="public complaint.html">
+                <i class="fa fa-paper-plane"></i>
+                Submit Complaint
+            </a>
+
+            <a href="track.html">
+                <i class="fa fa-search"></i>
+                Track Complaint
+            </a>
+
+            <a href="application.html">
+                <i class="fa fa-clipboard-list"></i>
+                Apply for Services
+            </a>
+
+            <a href="store.html">
+                <i class="fa fa-folder-open"></i>
+                Store Document
+            </a>
+
+            <a href="digilocker_request.html">
+                <i class="fa fa-lock"></i>
+                DigiLocker
+            </a>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main>
+            <section class="hero" style="padding: 2.5rem 2rem; margin-bottom: 2.5rem;">
+                <h2>Department of Energy / Power</h2>
+                <p>
+                    Manage related energy grids, utility policies, and sustainable resources. Apply for new connections,
+                    upgrades, or report outages and issues.
+                </p>
+            </section>
+
+            <section class="services">
+                <h3 class="section-title">Application Requests</h3>
+                <div class="service-grid">
+
+                    <a href="application.html" class="service-card"
+                        style="text-decoration: none; color: inherit; display: block;">
+                        <i class="fa fa-bolt"></i>
+                        <h3>New Service Connection (NSC)</h3>
+                        <p>Applying for a new electricity meter for a newly built house or shop.</p>
+                    </a>
+
+                    <a href="application.html" class="service-card"
+                        style="text-decoration: none; color: inherit; display: block;">
+                        <i class="fa fa-tachometer-alt"></i>
+                        <h3>Load Enhancement</h3>
+                        <p>If you add heavy appliances like 3-4 ACs or an EV charger, you must apply to increase your
+                            sanctioned "kilowatt" (kW) load to avoid fines.</p>
+                    </a>
+
+                    <a href="application.html" class="service-card"
+                        style="text-decoration: none; color: inherit; display: block;">
+                        <i class="fa fa-solar-panel"></i>
+                        <h3>Solar Rooftop Net-Metering</h3>
+                        <p>Under schemes like PM-Surya Ghar, you apply here to install solar panels and send excess
+                            power back to the grid in exchange for a lower bill.</p>
+                    </a>
+
+                    <a href="application.html" class="service-card"
+                        style="text-decoration: none; color: inherit; display: block;">
+                        <i class="fa fa-tools"></i>
+                        <h3>Temporary Connection</h3>
+                        <p>A short-term power line for construction sites, wedding halls, or festivals.</p>
+                    </a>
+
+                    <a href="application.html" class="service-card"
+                        style="text-decoration: none; color: inherit; display: block;">
+                        <i class="fa fa-exchange-alt"></i>
+                        <h3>Category Change</h3>
+                        <p>Changing your connection type from "Domestic" to "Commercial" (if you start a business) or
+                            "Agricultural."</p>
+                    </a>
+
+                </div>
+            </section>
+
+            <section class="services" style="margin-top: 3rem;">
+                <h3 class="section-title complaint-title">Common Complaints</h3>
+                <div class="service-grid">
+
+                    <a href="public complaint.html" class="service-card complaint-card"
+                        style="text-decoration: none; display: block;">
+                        <i class="fa fa-file-invoice-dollar"></i>
+                        <h3>Billing Errors</h3>
+                        <p>Reporting "Average Billing" (when the meter isn't read) or "Burnt Meter" issues where the
+                            reading is frozen.</p>
+                    </a>
+
+                    <a href="public complaint.html" class="service-card complaint-card"
+                        style="text-decoration: none; display: block;">
+                        <i class="fa fa-power-off"></i>
+                        <h3>Power Failure / Outage</h3>
+                        <p>Reporting local transformer bursts or long hours of unscheduled power cuts.</p>
+                    </a>
+
+                    <a href="public complaint.html" class="service-card complaint-card"
+                        style="text-decoration: none; display: block;">
+                        <i class="fa fa-wave-square"></i>
+                        <h3>Voltage Issues</h3>
+                        <p>High voltage (which can blow up your TV/Fridge) or low voltage (dim lights).</p>
+                    </a>
+
+                    <a href="public complaint.html" class="service-card complaint-card"
+                        style="text-decoration: none; display: block;">
+                        <i class="fa fa-exclamation-triangle"></i>
+                        <h3>Dangerous Infrastructure</h3>
+                        <p>Reporting a leaning electric pole or a dangling wire that could be a safety hazard.</p>
+                    </a>
+
+                    <a href="public complaint.html" class="service-card complaint-card"
+                        style="text-decoration: none; display: block;">
+                        <i class="fa fa-hand-holding-usd"></i>
+                        <h3>Corruption / Vigilance</h3>
+                        <p>Reporting illegal "hooking" (power theft) or bribery demands from department staff.</p>
+                    </a>
+
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <footer>
+        © 2026 Government Public Services Department
+    </footer>
+
+    <script src="homepage.js"></script>
+
+</body>
+
+</html>

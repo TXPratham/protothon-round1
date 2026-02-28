@@ -42,7 +42,7 @@
                 <p class="form-subtitle">Please fill in your details below.</p>
             </div>
 
-            <form action="#" method="POST" id="profileForm">
+            <form id="profileForm">
                 <div class="grid-form">
                     <div class="input-group">
                         <label class="input-label" for="firstName">First Name</label>
@@ -78,7 +78,22 @@
         </div>
     </div>
 
-    <script>
+    <script type="module">
+        import { db, auth } from './firebaseconfig.js';
+        import { doc, setDoc } from "https://www.gstatic.com/firebasejs/12.9.0/firebase-firestore.js";
+        import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.9.0/firebase-auth.js";
+
+        let currentUser = null;
+        if (auth) {
+            onAuthStateChanged(auth, (user) => {
+                if (user) {
+                    currentUser = user;
+                } else {
+                    console.warn("User is not signed in.");
+                }
+            });
+        }
+
         // Automatically calculate age based on Date of Birth
         document.getElementById('dob').addEventListener('change', function () {
             const dob = new Date(this.value);
@@ -95,10 +110,36 @@
             }
         });
 
-        document.getElementById('profileForm').addEventListener('submit', function (e) {
+        document.getElementById('profileForm').addEventListener('submit', async function (e) {
             e.preventDefault();
-            alert('Profile Setup Complete! Redirecting to Homepage...');
-            window.location.href = 'homepage.html';
+
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const mobileNumber = document.getElementById('mobileNumber').value;
+            const dob = document.getElementById('dob').value;
+            const age = document.getElementById('age').value;
+
+            try {
+                if (!currentUser || !db) throw new Error("Firebase DB is not initialized. Check configuration.");
+
+                // Save profile details to Firestore corresponding to the user's UID
+                await setDoc(doc(db, "users", currentUser.uid), {
+                    firstName: firstName,
+                    lastName: lastName,
+                    mobileNumber: mobileNumber,
+                    dob: dob,
+                    age: age,
+                    email: currentUser.email,
+                    profileCompleted: true,
+                    updatedAt: new Date()
+                }, { merge: true }); // Using merge in case they edit their profile later
+
+                alert('Profile Setup Complete! Redirecting to Homepage...');
+                window.location.href = 'homepage.html';
+            } catch (error) {
+                console.error("Error saving profile:", error);
+                alert("Error saving profile: " + error.message);
+            }
         });
     </script>
 </body>
